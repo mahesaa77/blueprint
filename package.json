@@ -1,0 +1,27 @@
+{
+  "name": "toko-pakaian",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Platform retail pakaian - modular monolith (NestJS + Next.js)",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "build": "pnpm --filter @toko/contracts build && pnpm --filter @toko/api build && pnpm --filter @toko/web build",
+    "dev": "pnpm --parallel --filter @toko/api --filter @toko/web dev",
+    "dev:api": "pnpm --filter @toko/api dev",
+    "dev:web": "pnpm --filter @toko/web dev",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm --filter @toko/contracts typecheck && pnpm --filter @toko/api typecheck && pnpm --filter @toko/web typecheck",
+    "test": "pnpm -r test",
+    "test:api": "pnpm --filter @toko/api test",
+    "test:web": "pnpm --filter @toko/web test",
+    "format": "prettier --write \"**/*.{ts,tsx,md,json,yaml,yml}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,md,json,yaml,yml}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.3"
+  }
+}

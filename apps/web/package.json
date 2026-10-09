@@ -1,0 +1,26 @@
+{
+  "name": "@toko/web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Customer PWA, Kasir PWA, dan Admin Dashboard dalam satu Next.js",
+  "scripts": {
+    "dev": "next dev --port 3001",
+    "build": "next build",
+    "start": "next start --port 3001",
+    "typecheck": "tsc --noEmit",
+    "lint": "tsc --noEmit",
+    "test": "echo \"web: E2E Playwright menyusul di Fase 1\" && exit 0"
+  },
+  "dependencies": {
+    "@toko/contracts": "workspace:*",
+    "next": "^15.5.27",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "typescript": "^5.9.3"
+  }
+}
